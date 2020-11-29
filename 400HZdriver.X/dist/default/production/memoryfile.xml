@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/400HZdriver.X.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>1024</length>
+      <used>42</used>
+      <free>982</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>24192</length>
+      <used>3384</used>
+      <free>20808</free>
+    </memory>
+  </executable>
+</project>
