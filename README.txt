@@ -1,3 +1,10 @@
+
+Firmware and MPLAB project files located in  '400HZdriver.X'
+
+Schematic located in '400hzDriver'
+
+PDF schematic is also in the driectory '400hzDriver'
+
 The current firmware starts the ciruit off at 60hz for a few seconds to give the user time to reset the GFCI if needed. It will then ramp up to 400hz.
 Choose parts based on your (mains voltage * 4) you plan on using.
 
