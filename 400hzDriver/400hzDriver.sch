@@ -1866,4 +1866,18 @@ F 3 "~" H 4250 7250 50  0001 C CNN
 	1    4250 7250
 	0    1    1    0   
 $EndComp
+$Comp
+L Device:R R?
+U 1 1 5FC57B7B
+P 3850 6950
+F 0 "R?" V 3750 7000 50  0000 C CNN
+F 1 "2K" V 3750 6850 50  0000 C CNN
+F 2 "" V 3780 6950 50  0001 C CNN
+F 3 "~" H 3850 6950 50  0001 C CNN
+	1    3850 6950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 6800 3850 6800
+Connection ~ 4250 6800
 $EndSCHEMATC

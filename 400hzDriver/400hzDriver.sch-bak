@@ -1739,28 +1739,6 @@ Wire Notes Line
 	3100 5400 3100 7550
 Wire Notes Line
 	600  7550 3100 7550
-$Comp
-L Device:D D?
-U 1 1 5FD35BA3
-P 4250 7250
-F 0 "D?" H 4350 7200 50  0000 C CNN
-F 1 "D" V 4250 7350 50  0000 C CNN
-F 2 "" H 4250 7250 50  0001 C CNN
-F 3 "~" H 4250 7250 50  0001 C CNN
-	1    4250 7250
-	0    1    1    0   
-$EndComp
-$Comp
-L Device:D D?
-U 1 1 5FD6DF97
-P 4250 6950
-F 0 "D?" V 4200 7050 50  0000 C CNN
-F 1 "D" V 4300 7050 50  0000 C CNN
-F 2 "" H 4250 6950 50  0001 C CNN
-F 3 "~" H 4250 6950 50  0001 C CNN
-	1    4250 6950
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6050 7050 6050 6750
 $Comp
@@ -1836,7 +1814,6 @@ Wire Wire Line
 	4750 7100 4750 6350
 Wire Wire Line
 	3250 7600 3850 7600
-Connection ~ 4250 7100
 Wire Wire Line
 	4250 6800 4500 6800
 Wire Wire Line
@@ -1866,4 +1843,41 @@ Connection ~ 4700 7300
 Connection ~ 4500 7300
 Wire Wire Line
 	4900 7600 4700 7600
+$Comp
+L Device:D_Schottky D?
+U 1 1 5FEA990B
+P 4250 6950
+F 0 "D?" H 4250 7166 50  0000 C CNN
+F 1 "D_Schottky" H 4200 7050 50  0000 C CNN
+F 2 "" H 4250 6950 50  0001 C CNN
+F 3 "~" H 4250 6950 50  0001 C CNN
+	1    4250 6950
+	0    1    1    0   
+$EndComp
+Connection ~ 4250 7100
+$Comp
+L Device:D_Schottky D?
+U 1 1 5FEAA3F3
+P 4250 7250
+F 0 "D?" H 4250 7466 50  0000 C CNN
+F 1 "D_Schottky" H 4500 7150 50  0000 C CNN
+F 2 "" H 4250 7250 50  0001 C CNN
+F 3 "~" H 4250 7250 50  0001 C CNN
+	1    4250 7250
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5FC57B7B
+P 3850 6950
+F 0 "R?" V 3750 6950 50  0000 C CNN
+F 1 "2K" V 3800 7100 50  0000 C CNN
+F 2 "" V 3780 6950 50  0001 C CNN
+F 3 "~" H 3850 6950 50  0001 C CNN
+	1    3850 6950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4250 6800 3850 6800
+Connection ~ 4250 6800
 $EndSCHEMATC
