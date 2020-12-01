@@ -17,3 +17,5 @@ The ENTIRE circuit is live when plugged in, and the output has no neutral, they 
 
 Not for beginners. Build at your own risk!
 Enjoy your flickerless LED xmass lights!
+
+I'm still experimenting with different fets and with the asymmetric gate drive. I'm not going to put down any part numbers until I have something that works well.
