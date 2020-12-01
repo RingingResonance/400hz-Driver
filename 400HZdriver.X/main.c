@@ -37,7 +37,7 @@
 /***********************************************************
 ***********************************************************/
 int main(void){
-    waveType = wsquare;
+    waveType = wsine;
     Init();             //Initialize vars.
     waveSet(waveType, 400);   //Set wave type and frequency standard.
     StartRecover();     //Start systems.

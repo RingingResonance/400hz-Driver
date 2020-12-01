@@ -77,11 +77,11 @@ Program Memory  [Origin = 0x100, Length = 0x3f00]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x738           0xad4  (2772)
-.const                       0x838               0x190           0x258  (600)
-.dinit                       0x9c8                 0x8             0xc  (12)
+.text                        0x100               0x73a           0xad7  (2775)
+.const                       0x83a               0x190           0x258  (600)
+.dinit                       0x9ca                 0x8             0xc  (12)
 
-                 Total program memory used (bytes):          0xd38  (3384) 13%
+                 Total program memory used (bytes):          0xd3b  (3387) 14%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0x7c]
@@ -185,8 +185,8 @@ External Symbols in Program Memory (by address):
                   0x0007c4                  _sysShutdown
                   0x0007d8                  _StartRecover
                   0x00081e                  _main
-                  0x000832                  __DefaultInterrupt
-                  0x000838                  _sine
+                  0x000834                  __DefaultInterrupt
+                  0x00083a                  _sine
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
@@ -198,7 +198,7 @@ External Symbols in Program Memory (by name):
                   0x0002e8                  _SquareGen
                   0x0007d8                  _StartRecover
                   0x000560                  __AddressError
-                  0x000832                  __DefaultInterrupt
+                  0x000834                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
                   0x0004dc                  __FLTAInterrupt
                   0x0005e0                  __MathError
@@ -212,7 +212,7 @@ External Symbols in Program Memory (by name):
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
                   0x00081e                  _main
-                  0x000838                  _sine
+                  0x00083a                  _sine
                   0x000434                  _sixtyHZprecision
                   0x0007c4                  _sysShutdown
                   0x00041a                  _waveSet
@@ -272,7 +272,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x738
+.text             0x000100        0x73a
  *(.init)
  .init            0x000100         0x4c c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                   0x000100                  __resetPRI
@@ -284,7 +284,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0001c8        0x66a build/default/production/main.o
+ .isr.text        0x0001c8        0x66c build/default/production/main.o
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x0002e8                  _SquareGen
@@ -303,16 +303,16 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x0007c4                  _sysShutdown
                   0x0007d8                  _StartRecover
                   0x00081e                  _main
- .isr             0x000832          0x4 default_isr
-                  0x000832                  __DefaultInterrupt
+ .isr             0x000834          0x4 default_isr
+                  0x000834                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000836          0x2 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x000836                  __crt_start_mode
-                  0x000836                  __crt_start_mode_normal
+                  0x000838          0x2 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x000838                  __crt_start_mode
+                  0x000838                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -996,9 +996,9 @@ __c30_signature
  .ivt._ReservedTrap7
                   0x000012          0x2 build/default/production/main.o
 
-.const              0x8838        0x190 load address 0x000838  
- .const             0x8838        0x190 build/default/production/main.o
-                    0x8838                  _sine
+.const              0x883a        0x190 load address 0x00083a  
+ .const             0x883a        0x190 build/default/production/main.o
+                    0x883a                  _sine
 
-.dinit            0x0009c8          0x8
- .dinit           0x0009c8          0x8 data_init
+.dinit            0x0009ca          0x8
+ .dinit           0x0009ca          0x8 data_init
