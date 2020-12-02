@@ -118,8 +118,13 @@ void SquareGen(void){
         resetWait++;
     }
     else if (slowStart > 500 && frequencySet == 400){
-        slowStart--; //Decrease slowStart until it is 500.
-        PR2 = slowStart; //500 for 400hz. 3,333.3333 for 60hz. 4000 for 50hz. At 20mips.
+        if(rampDiv >= 100){
+            slowStart--; //Decrease slowStart until it is 500.
+            PR2 = slowStart; //500 for 400hz. 3,333.3333 for 60hz. 4000 for 50hz. At 20mips.
+            rampDiv = 0;
+        }
+        else
+            rampDiv++;
     }
     else if (frequencySet == 60)
         sixtyHZprecision();         //This will add a slight jitter to the wave, but should give a sudo-precise 60hz.
@@ -160,8 +165,13 @@ void SineGen(void){
         resetWait++;
     }
     else if(slowStart > 250 && frequencySet == 400){
-        slowStart--;    //Decrease slowStart until it is 250.
-        PR2 = slowStart;    //250 for 400hz. 1666.6666 for 60hz. 2000 for 50hz. At 20mips.
+        if(rampDiv >= 100){
+            slowStart--;    //Decrease slowStart until it is 250.
+            PR2 = slowStart;    //250 for 400hz. 1666.6666 for 60hz. 2000 for 50hz. At 20mips.
+            rampDiv = 0;
+        }
+        else
+            rampDiv++;
     }
     else if (frequencySet == 60){
         //for a precision 60hz, we need to constantly rotate our timing variable "PR2" through 1665, 1666, 1669
