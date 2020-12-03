@@ -77,11 +77,11 @@ Program Memory  [Origin = 0x100, Length = 0x3f00]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x75e           0xb0d  (2829)
-.const                       0x85e               0x190           0x258  (600)
-.dinit                       0x9ee                 0x8             0xc  (12)
+.text                        0x100               0x760           0xb10  (2832)
+.const                       0x860               0x190           0x258  (600)
+.dinit                       0x9f0                 0x8             0xc  (12)
 
-                 Total program memory used (bytes):          0xd71  (3441) 14%
+                 Total program memory used (bytes):          0xd74  (3444) 14%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0x7c]
@@ -172,52 +172,52 @@ External Symbols in Program Memory (by address):
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x0002e8                  _SquareGen
-                  0x000382                  _SineGen
-                  0x00043e                  _waveSet
-                  0x000458                  _sixtyHZprecision
-                  0x000500                  __FLTAInterrupt
-                  0x000540                  __OscillatorFail
-                  0x000584                  __AddressError
-                  0x0005c4                  __StackError
-                  0x000604                  __MathError
-                  0x000644                  __ReservedTrap7
-                  0x000680                  _Init
-                  0x00078e                  _OSCIntToExt
-                  0x0007ba                  _OSCExtToInt
-                  0x0007e8                  _sysShutdown
-                  0x0007fc                  _StartRecover
-                  0x000842                  _main
-                  0x000858                  __DefaultInterrupt
-                  0x00085e                  _sine
+                  0x000384                  _SineGen
+                  0x000440                  _waveSet
+                  0x00045a                  _sixtyHZprecision
+                  0x000502                  __FLTAInterrupt
+                  0x000542                  __OscillatorFail
+                  0x000586                  __AddressError
+                  0x0005c6                  __StackError
+                  0x000606                  __MathError
+                  0x000646                  __ReservedTrap7
+                  0x000682                  _Init
+                  0x000790                  _OSCIntToExt
+                  0x0007bc                  _OSCExtToInt
+                  0x0007ea                  _sysShutdown
+                  0x0007fe                  _StartRecover
+                  0x000844                  _main
+                  0x00085a                  __DefaultInterrupt
+                  0x000860                  _sine
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x000680                  _Init
-                  0x0007ba                  _OSCExtToInt
-                  0x00078e                  _OSCIntToExt
-                  0x000382                  _SineGen
+                  0x000682                  _Init
+                  0x0007bc                  _OSCExtToInt
+                  0x000790                  _OSCIntToExt
+                  0x000384                  _SineGen
                   0x0002e8                  _SquareGen
-                  0x0007fc                  _StartRecover
-                  0x000584                  __AddressError
-                  0x000858                  __DefaultInterrupt
+                  0x0007fe                  _StartRecover
+                  0x000586                  __AddressError
+                  0x00085a                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
-                  0x000500                  __FLTAInterrupt
-                  0x000604                  __MathError
-                  0x000540                  __OscillatorFail
-                  0x000644                  __ReservedTrap7
-                  0x0005c4                  __StackError
+                  0x000502                  __FLTAInterrupt
+                  0x000606                  __MathError
+                  0x000542                  __OscillatorFail
+                  0x000646                  __ReservedTrap7
+                  0x0005c6                  __StackError
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x000152                  __data_init
                   0x000152                  __data_init_standard
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000842                  _main
-                  0x00085e                  _sine
-                  0x000458                  _sixtyHZprecision
-                  0x0007e8                  _sysShutdown
-                  0x00043e                  _waveSet
+                  0x000844                  _main
+                  0x000860                  _sine
+                  0x00045a                  _sixtyHZprecision
+                  0x0007ea                  _sysShutdown
+                  0x000440                  _waveSet
 
 Memory Configuration
 
@@ -274,7 +274,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x75e
+.text             0x000100        0x760
  *(.init)
  .init            0x000100         0x4c c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                   0x000100                  __resetPRI
@@ -286,35 +286,35 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0001c8        0x690 build/default/production/main.o
+ .isr.text        0x0001c8        0x692 build/default/production/main.o
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x0002e8                  _SquareGen
-                  0x000382                  _SineGen
-                  0x00043e                  _waveSet
-                  0x000458                  _sixtyHZprecision
-                  0x000500                  __FLTAInterrupt
-                  0x000540                  __OscillatorFail
-                  0x000584                  __AddressError
-                  0x0005c4                  __StackError
-                  0x000604                  __MathError
-                  0x000644                  __ReservedTrap7
-                  0x000680                  _Init
-                  0x00078e                  _OSCIntToExt
-                  0x0007ba                  _OSCExtToInt
-                  0x0007e8                  _sysShutdown
-                  0x0007fc                  _StartRecover
-                  0x000842                  _main
- .isr             0x000858          0x4 default_isr
-                  0x000858                  __DefaultInterrupt
+                  0x000384                  _SineGen
+                  0x000440                  _waveSet
+                  0x00045a                  _sixtyHZprecision
+                  0x000502                  __FLTAInterrupt
+                  0x000542                  __OscillatorFail
+                  0x000586                  __AddressError
+                  0x0005c6                  __StackError
+                  0x000606                  __MathError
+                  0x000646                  __ReservedTrap7
+                  0x000682                  _Init
+                  0x000790                  _OSCIntToExt
+                  0x0007bc                  _OSCExtToInt
+                  0x0007ea                  _sysShutdown
+                  0x0007fe                  _StartRecover
+                  0x000844                  _main
+ .isr             0x00085a          0x4 default_isr
+                  0x00085a                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x00085c          0x2 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x00085c                  __crt_start_mode
-                  0x00085c                  __crt_start_mode_normal
+                  0x00085e          0x2 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x00085e                  __crt_start_mode
+                  0x00085e                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -372,9 +372,9 @@ userdata
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x1c7 build/default/production/main.o
 
-.debug_line       0x000000        0x234
+.debug_line       0x000000        0x239
  *(.debug_line)
- .debug_line      0x000000        0x234 build/default/production/main.o
+ .debug_line      0x000000        0x239 build/default/production/main.o
 
 .debug_frame      0x000000        0x32c
  *(.debug_frame)
@@ -999,9 +999,9 @@ __c30_signature
  .ivt._ReservedTrap7
                   0x000012          0x2 build/default/production/main.o
 
-.const              0x885e        0x190 load address 0x00085e  
- .const             0x885e        0x190 build/default/production/main.o
-                    0x885e                  _sine
+.const              0x8860        0x190 load address 0x000860  
+ .const             0x8860        0x190 build/default/production/main.o
+                    0x8860                  _sine
 
-.dinit            0x0009ee          0x8
- .dinit           0x0009ee          0x8 data_init
+.dinit            0x0009f0          0x8
+ .dinit           0x0009f0          0x8 data_init

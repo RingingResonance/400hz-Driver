@@ -28,7 +28,7 @@ extern "C" {
 #pragma config WDT = WDT_OFF            // Watchdog Timer (Disabled)
 
 // FBORPOR
-#pragma config FPWRT = PWRT_4          // POR Timer Value (64ms)
+#pragma config FPWRT = PWRT_64          // POR Timer Value (64ms)
 #pragma config BODENV = BORV20          // Brown Out Voltage (Reserved)
 #pragma config BOREN = PBOR_ON         // PBOR Enable (Disabled)
 #pragma config LPOL = PWMxL_ACT_HI      // Low-side PWM Output Polarity (Active High)
