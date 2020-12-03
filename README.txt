@@ -19,3 +19,7 @@ Not for beginners. Build at your own risk!
 Enjoy your flickerless LED xmass lights!
 
 I'm still experimenting with different fets and with the asymmetric gate drive. I'm not going to put down any part numbers until I have something that works well.
+
+Also, I have the firmware currently set to produce a sine wave with a PWM frequency of 50khz. This is currently not working presumably due to the low pass filter arrangment.
+
+If you decide to use this in it's current state then I recomend you put it back to square wave mode and exclude the output filter unless you know more about electronics than I do and can spot my mistakes ;)
