@@ -202,12 +202,20 @@ void SineGen(void){
      */
     dsp_accA = __builtin_mpy(sine[wheel], 0x178, NULL, NULL, 0, NULL, NULL, 0); //(sine of wheel) * 0.0060606
     FRcalcTMP = __builtin_sac(dsp_accA, 0); //store the result into FRcalcTMP
+    //Scaled sine data down to something acceptable for PWM. Now just need to scale it down some more for soft starting.
     dsp_accA = __builtin_mpy(sftStart, FRcalcTMP, NULL, NULL, 0, NULL, NULL, 0); //scale FRcalcTMP by the soft start number.
     pwmOutput1 = __builtin_sac(dsp_accA, 0); //Now it's scaled properly for the PWM duty cycle reg.
-    //All that math down to 4 instructions.
+    //Output 1 is now scaled properly.
+    
+    //Invert and scale output 2
+    pwmOutput2 = 0x0178 - FRcalcTMP;
+    dsp_accA = __builtin_mpy(sftStart, pwmOutput2, NULL, NULL, 0, NULL, NULL, 0); //scale pwmOutput2 by the soft start number.
+    pwmOutput2 = __builtin_sac(dsp_accA, 0); //Now it's scaled properly for the PWM duty cycle reg.
+    //All that math down to 7 instructions.
+    
     PDC1 = pwmOutput1;
-    PDC2 = 0x0178 - pwmOutput1;
-    //Blink the LED at the same speed we are running at for debugging.
+    PDC2 = pwmOutput2;
+    //Blink the LED at the same speed we are running at for debugging and to show that the output is on.
     if (wheel == 51){
         PORTBbits.RB0 = 1;
     }
