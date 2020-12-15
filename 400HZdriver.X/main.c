@@ -37,6 +37,9 @@
 /***********************************************************
 ***********************************************************/
 int main(void){
+    PDC1 = 0000;            //set output to 0
+    PDC2 = 0000;            //set output to 0
+    PDC3 = 0000;            //set output to 0
     waveType = wsine;
     Init();             //Initialize vars.
     waveSet(waveType, 400);   //Set wave type and frequency standard.

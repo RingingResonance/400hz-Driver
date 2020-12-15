@@ -200,13 +200,13 @@ void SineGen(void){
      * When the dsPIC reads from the 40 bit accumulator it reads the upper 16 bits.
      * This effectively does our 16 bit shift for us for free.
      */
-    dsp_accA = __builtin_mpy(sine[wheel], 0x180, NULL, NULL, 0, NULL, NULL, 0); //(sine of wheel) * 0.0060606
+    dsp_accA = __builtin_mpy(sine[wheel], 0x178, NULL, NULL, 0, NULL, NULL, 0); //(sine of wheel) * 0.0060606
     FRcalcTMP = __builtin_sac(dsp_accA, 0); //store the result into FRcalcTMP
     dsp_accA = __builtin_mpy(sftStart, FRcalcTMP, NULL, NULL, 0, NULL, NULL, 0); //scale FRcalcTMP by the soft start number.
     pwmOutput1 = __builtin_sac(dsp_accA, 0); //Now it's scaled properly for the PWM duty cycle reg.
     //All that math down to 4 instructions.
     PDC1 = pwmOutput1;
-    PDC2 = 0x0180 - pwmOutput1;
+    PDC2 = 0x0178 - pwmOutput1;
     //Blink the LED at the same speed we are running at for debugging.
     if (wheel == 51){
         PORTBbits.RB0 = 1;
