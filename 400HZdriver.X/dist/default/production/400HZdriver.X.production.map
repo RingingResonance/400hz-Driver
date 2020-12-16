@@ -77,11 +77,11 @@ Program Memory  [Origin = 0x100, Length = 0x3f00]
 
 section                    address   length (PC units)   length (bytes) (dec)
 -------                    -------   -----------------   --------------------
-.text                        0x100               0x77a           0xb37  (2871)
-.const                       0x87a               0x190           0x258  (600)
-.dinit                       0xa0a                 0x8             0xc  (12)
+.text                        0x100               0x7d6           0xbc1  (3009)
+.const                       0x8d6               0x190           0x258  (600)
+.dinit                       0xa66                 0x8             0xc  (12)
 
-                 Total program memory used (bytes):          0xd9b  (3483) 14%
+                 Total program memory used (bytes):          0xe25  (3621) 14%
 
 
 Ivt Memory  [Origin = 0x4, Length = 0x7c]
@@ -102,9 +102,9 @@ Data Memory  [Origin = 0x800, Length = 0x400]
 
 section                    address      alignment gaps    total length  (dec)
 -------                    -------      --------------    -------------------
-.nbss                        0x800                   0            0x2c  (44)
+.nbss                        0x800                   0            0x2e  (46)
 
-                 Total data memory used (bytes):           0x2c  (44) 4%
+                 Total data memory used (bytes):           0x2e  (46) 4%
 
 
 Dynamic Memory Usage
@@ -112,56 +112,58 @@ Dynamic Memory Usage
 region                     address                      maximum length  (dec)
 ------                     -------                      ---------------------
 heap                             0                                   0  (0)
-stack                        0x82c                               0x3d4  (980)
+stack                        0x82e                               0x3d2  (978)
 
-                 Maximum dynamic memory (bytes):          0x3d4  (980)
+                 Maximum dynamic memory (bytes):          0x3d2  (978)
 
 
 External Symbols in Data Memory (by address):
 
-                    0x0800                  _wheel
-                    0x0802                  _rampDiv
-                    0x0804                  _phase
-                    0x0806                  _FtmpSine
-                    0x080a                  _FpwmPercent
-                    0x080e                  _waveType
-                    0x0810                  _frequencySet
-                    0x0812                  _rotation
-                    0x0814                  _resetWait
-                    0x0816                  _hzdrum
-                    0x0818                  _sftStart
-                    0x081a                  _slowStart
-                    0x081c                  _fracttemp
-                    0x081e                  _FRcalcTMP
-                    0x0820                  _pwmOutput1
-                    0x0822                  _pwmOutput2
-                    0x0824                  _StrtTmr
-                    0x0826                  _clkTimeout
-                    0x0828                  _clkReady
-                    0x082a                  _exClkFail
+                    0x0800                  _r400ramp
+                    0x0802                  _wheel
+                    0x0804                  _rampDiv
+                    0x0806                  _phase
+                    0x0808                  _FtmpSine
+                    0x080c                  _FpwmPercent
+                    0x0810                  _waveType
+                    0x0812                  _frequencySet
+                    0x0814                  _rotation
+                    0x0816                  _resetWait
+                    0x0818                  _hzdrum
+                    0x081a                  _sftStart
+                    0x081c                  _slowStart
+                    0x081e                  _fracttemp
+                    0x0820                  _FRcalcTMP
+                    0x0822                  _pwmOutput1
+                    0x0824                  _pwmOutput2
+                    0x0826                  _StrtTmr
+                    0x0828                  _clkTimeout
+                    0x082a                  _clkReady
+                    0x082c                  _exClkFail
 
 External Symbols in Data Memory (by name):
 
-                    0x081e                  _FRcalcTMP
-                    0x080a                  _FpwmPercent
-                    0x0806                  _FtmpSine
-                    0x0824                  _StrtTmr
-                    0x0828                  _clkReady
-                    0x0826                  _clkTimeout
-                    0x082a                  _exClkFail
-                    0x081c                  _fracttemp
-                    0x0810                  _frequencySet
-                    0x0816                  _hzdrum
-                    0x0804                  _phase
-                    0x0820                  _pwmOutput1
-                    0x0822                  _pwmOutput2
-                    0x0802                  _rampDiv
-                    0x0814                  _resetWait
-                    0x0812                  _rotation
-                    0x0818                  _sftStart
-                    0x081a                  _slowStart
-                    0x080e                  _waveType
-                    0x0800                  _wheel
+                    0x0820                  _FRcalcTMP
+                    0x080c                  _FpwmPercent
+                    0x0808                  _FtmpSine
+                    0x0826                  _StrtTmr
+                    0x082a                  _clkReady
+                    0x0828                  _clkTimeout
+                    0x082c                  _exClkFail
+                    0x081e                  _fracttemp
+                    0x0812                  _frequencySet
+                    0x0818                  _hzdrum
+                    0x0806                  _phase
+                    0x0822                  _pwmOutput1
+                    0x0824                  _pwmOutput2
+                    0x0800                  _r400ramp
+                    0x0804                  _rampDiv
+                    0x0816                  _resetWait
+                    0x0814                  _rotation
+                    0x081a                  _sftStart
+                    0x081c                  _slowStart
+                    0x0810                  _waveType
+                    0x0802                  _wheel
 
 External Symbols in Program Memory (by address):
 
@@ -172,52 +174,52 @@ External Symbols in Program Memory (by address):
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x0002e8                  _SquareGen
-                  0x000384                  _SineGen
-                  0x000454                  _waveSet
-                  0x00046e                  _sixtyHZprecision
-                  0x000516                  __FLTAInterrupt
-                  0x000556                  __OscillatorFail
-                  0x00059a                  __AddressError
-                  0x0005da                  __StackError
-                  0x00061a                  __MathError
-                  0x00065a                  __ReservedTrap7
-                  0x000696                  _Init
-                  0x0007a4                  _OSCIntToExt
-                  0x0007d0                  _OSCExtToInt
-                  0x0007fe                  _sysShutdown
-                  0x000812                  _StartRecover
-                  0x000858                  _main
-                  0x000874                  __DefaultInterrupt
-                  0x00087a                  _sine
+                  0x000398                  _SineGen
+                  0x00047c                  _waveSet
+                  0x000496                  _sixtyHZprecision
+                  0x00053e                  __FLTAInterrupt
+                  0x00057e                  __OscillatorFail
+                  0x0005c2                  __AddressError
+                  0x000602                  __StackError
+                  0x000642                  __MathError
+                  0x000682                  __ReservedTrap7
+                  0x0006be                  _Init
+                  0x0007cc                  _OSCIntToExt
+                  0x0007f8                  _OSCExtToInt
+                  0x000826                  _sysShutdown
+                  0x00083a                  _StartRecover
+                  0x0008b0                  _main
+                  0x0008d0                  __DefaultInterrupt
+                  0x0008d6                  _sine
                   0xf8000a                  __FGS.sec
 
 External Symbols in Program Memory (by name):
 
-                  0x000696                  _Init
-                  0x0007d0                  _OSCExtToInt
-                  0x0007a4                  _OSCIntToExt
-                  0x000384                  _SineGen
+                  0x0006be                  _Init
+                  0x0007f8                  _OSCExtToInt
+                  0x0007cc                  _OSCIntToExt
+                  0x000398                  _SineGen
                   0x0002e8                  _SquareGen
-                  0x000812                  _StartRecover
-                  0x00059a                  __AddressError
-                  0x000874                  __DefaultInterrupt
+                  0x00083a                  _StartRecover
+                  0x0005c2                  __AddressError
+                  0x0008d0                  __DefaultInterrupt
                   0xf8000a                  __FGS.sec
-                  0x000516                  __FLTAInterrupt
-                  0x00061a                  __MathError
-                  0x000556                  __OscillatorFail
-                  0x00065a                  __ReservedTrap7
-                  0x0005da                  __StackError
+                  0x00053e                  __FLTAInterrupt
+                  0x000642                  __MathError
+                  0x00057e                  __OscillatorFail
+                  0x000682                  __ReservedTrap7
+                  0x000602                  __StackError
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x000152                  __data_init
                   0x000152                  __data_init_standard
                   0x00013c                  __psv_init
                   0x000100                  __resetPRI
-                  0x000858                  _main
-                  0x00087a                  _sine
-                  0x00046e                  _sixtyHZprecision
-                  0x0007fe                  _sysShutdown
-                  0x000454                  _waveSet
+                  0x0008b0                  _main
+                  0x0008d6                  _sine
+                  0x000496                  _sixtyHZprecision
+                  0x000826                  _sysShutdown
+                  0x00047c                  _waveSet
 
 Memory Configuration
 
@@ -274,7 +276,7 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
                   0x000002          0x2 SHORT 0x0 ((ABSOLUTE (__reset) >> 0x10) & 0x7f)
                   0x000003          0x2 SHORT 0x0
 
-.text             0x000100        0x77a
+.text             0x000100        0x7d6
  *(.init)
  .init            0x000100         0x4c c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt0_standard.o)
                   0x000100                  __resetPRI
@@ -286,35 +288,35 @@ LOAD c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\libfx-elf.a
  *(.user_init)
  *(.handle)
  *(.isr*)
- .isr.text        0x0001c8        0x6ac build/default/production/main.o
+ .isr.text        0x0001c8        0x708 build/default/production/main.o
                   0x0001c8                  __T1Interrupt
                   0x000294                  __T2Interrupt
                   0x0002e8                  _SquareGen
-                  0x000384                  _SineGen
-                  0x000454                  _waveSet
-                  0x00046e                  _sixtyHZprecision
-                  0x000516                  __FLTAInterrupt
-                  0x000556                  __OscillatorFail
-                  0x00059a                  __AddressError
-                  0x0005da                  __StackError
-                  0x00061a                  __MathError
-                  0x00065a                  __ReservedTrap7
-                  0x000696                  _Init
-                  0x0007a4                  _OSCIntToExt
-                  0x0007d0                  _OSCExtToInt
-                  0x0007fe                  _sysShutdown
-                  0x000812                  _StartRecover
-                  0x000858                  _main
- .isr             0x000874          0x4 default_isr
-                  0x000874                  __DefaultInterrupt
+                  0x000398                  _SineGen
+                  0x00047c                  _waveSet
+                  0x000496                  _sixtyHZprecision
+                  0x00053e                  __FLTAInterrupt
+                  0x00057e                  __OscillatorFail
+                  0x0005c2                  __AddressError
+                  0x000602                  __StackError
+                  0x000642                  __MathError
+                  0x000682                  __ReservedTrap7
+                  0x0006be                  _Init
+                  0x0007cc                  _OSCIntToExt
+                  0x0007f8                  _OSCExtToInt
+                  0x000826                  _sysShutdown
+                  0x00083a                  _StartRecover
+                  0x0008b0                  _main
+ .isr             0x0008d0          0x4 default_isr
+                  0x0008d0                  __DefaultInterrupt
  *(.libc)
  *(.libm)
  *(.libdsp)
  *(.lib*)
  .libpic30_crt_start_mode
-                  0x000878          0x2 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
-                  0x000878                  __crt_start_mode
-                  0x000878                  __crt_start_mode_normal
+                  0x0008d4          0x2 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(crt_start_mode_normal.Leo)
+                  0x0008d4                  __crt_start_mode
+                  0x0008d4                  __crt_start_mode_normal
 
 usercode
  *(usercode)
@@ -363,26 +365,26 @@ userdata
 .comment
  *(.comment)
 
-.debug_info       0x000000       0x268d
+.debug_info       0x000000       0x26ad
  *(.debug_info)
- .debug_info      0x000000       0x268d build/default/production/main.o
+ .debug_info      0x000000       0x26ad build/default/production/main.o
  *(.gnu.linkonce.wi.*)
 
 .debug_abbrev     0x000000        0x1c7
  *(.debug_abbrev)
  .debug_abbrev    0x000000        0x1c7 build/default/production/main.o
 
-.debug_line       0x000000        0x23f
+.debug_line       0x000000        0x260
  *(.debug_line)
- .debug_line      0x000000        0x23f build/default/production/main.o
+ .debug_line      0x000000        0x260 build/default/production/main.o
 
 .debug_frame      0x000000        0x32c
  *(.debug_frame)
  .debug_frame     0x000000        0x32c build/default/production/main.o
 
-.debug_str        0x000000        0x14e
+.debug_str        0x000000        0x157
  *(.debug_str)
- .debug_str       0x000000        0x14e build/default/production/main.o
+ .debug_str       0x000000        0x157 build/default/production/main.o
 
 .debug_loc
  *(.debug_loc)
@@ -391,10 +393,10 @@ userdata
  *(.debug_macinfo)
 
 .debug_pubnames
-                  0x000000        0x25c
+                  0x000000        0x269
  *(.debug_pubnames)
  .debug_pubnames
-                  0x000000        0x25c build/default/production/main.o
+                  0x000000        0x269 build/default/production/main.o
 
 .debug_ranges
  *(.debug_ranges)
@@ -922,28 +924,29 @@ __c30_signature
  __c30_signature
                   0x000281          0x6 c:/program files (x86)/microchip/xc16/v1.31/bin/bin/../../lib\liblega-pic30-elf.a(data_init_standard.o)
 
-.nbss               0x0800         0x2c
- .nbss              0x0800         0x2c build/default/production/main.o
-                    0x0800                  _wheel
-                    0x0802                  _rampDiv
-                    0x0804                  _phase
-                    0x0806                  _FtmpSine
-                    0x080a                  _FpwmPercent
-                    0x080e                  _waveType
-                    0x0810                  _frequencySet
-                    0x0812                  _rotation
-                    0x0814                  _resetWait
-                    0x0816                  _hzdrum
-                    0x0818                  _sftStart
-                    0x081a                  _slowStart
-                    0x081c                  _fracttemp
-                    0x081e                  _FRcalcTMP
-                    0x0820                  _pwmOutput1
-                    0x0822                  _pwmOutput2
-                    0x0824                  _StrtTmr
-                    0x0826                  _clkTimeout
-                    0x0828                  _clkReady
-                    0x082a                  _exClkFail
+.nbss               0x0800         0x2e
+ .nbss              0x0800         0x2e build/default/production/main.o
+                    0x0800                  _r400ramp
+                    0x0802                  _wheel
+                    0x0804                  _rampDiv
+                    0x0806                  _phase
+                    0x0808                  _FtmpSine
+                    0x080c                  _FpwmPercent
+                    0x0810                  _waveType
+                    0x0812                  _frequencySet
+                    0x0814                  _rotation
+                    0x0816                  _resetWait
+                    0x0818                  _hzdrum
+                    0x081a                  _sftStart
+                    0x081c                  _slowStart
+                    0x081e                  _fracttemp
+                    0x0820                  _FRcalcTMP
+                    0x0822                  _pwmOutput1
+                    0x0824                  _pwmOutput2
+                    0x0826                  _StrtTmr
+                    0x0828                  _clkTimeout
+                    0x082a                  _clkReady
+                    0x082c                  _exClkFail
 
 .config_ICS       0xf8000c          0x2
  .config_ICS      0xf8000c          0x2 build/default/production/main.o
@@ -999,9 +1002,9 @@ __c30_signature
  .ivt._ReservedTrap7
                   0x000012          0x2 build/default/production/main.o
 
-.const              0x887a        0x190 load address 0x00087a  
- .const             0x887a        0x190 build/default/production/main.o
-                    0x887a                  _sine
+.const              0x88d6        0x190 load address 0x0008d6  
+ .const             0x88d6        0x190 build/default/production/main.o
+                    0x88d6                  _sine
 
-.dinit            0x000a0a          0x8
- .dinit           0x000a0a          0x8 data_init
+.dinit            0x000a66          0x8
+ .dinit           0x000a66          0x8 data_init

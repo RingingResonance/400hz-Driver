@@ -116,10 +116,16 @@ void SquareGen(void){
     if (resetWait < 20000 && frequencySet == 400){
         //Hold at 60 for a few seconds.
         resetWait++;
+        if (r400ramp == 0){
+            resetWait = 20000;
+        }
     }
     else if (slowStart > 500 && frequencySet == 400){
         if(rampDiv >= 100){
             slowStart--; //Decrease slowStart until it is 500.
+            if (r400ramp == 0){
+                slowStart = 500;
+            }
             PR2 = slowStart; //500 for 400hz. 3,333.3333 for 60hz. 4000 for 50hz. At 20mips.
             rampDiv = 0;
             PORTBbits.RB0 = 1;
@@ -165,10 +171,16 @@ void SineGen(void){
     else if (resetWait < 40000 && frequencySet == 400){
         //Hold at 60hz for a few seconds if frequencySet is at 400.
         resetWait++;
+        if (r400ramp == 0){
+            resetWait = 40000;
+        }
     }
     else if(slowStart > 250 && frequencySet == 400){
         if(rampDiv >= 100){
             slowStart--;    //Decrease slowStart until it is 250.
+            if (r400ramp == 0){
+                slowStart = 250;
+            }
             PR2 = slowStart;    //250 for 400hz. 1666.6666 for 60hz. 2000 for 50hz. At 20mips.
             rampDiv = 0;
         }

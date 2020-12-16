@@ -76,7 +76,7 @@ void StartRecover(void){
             slowStart = 4000;
         }
     }
-    else{
+    else if (frequencySet == 60 || (frequencySet == 400 && r400ramp == Enable)){
         //60hz for starting, but not for running.
         if (waveType == wsine){
             PR2 = 1666;       //1666 is for 60hz in PWM mode. 20MIPS
@@ -85,6 +85,17 @@ void StartRecover(void){
         else{
             PR2 = 3333;       //square wave starting frequency. 60hz
             slowStart = 3333;
+        }
+    }
+    else {
+        //60hz for starting, but not for running.
+        if (waveType == wsine){
+            PR2 = 250;       //250 is for 400hz in PWM mode. 20MIPS
+            slowStart = 250;
+        }
+        else{
+            PR2 = 500;       //square wave frequency. 400hz
+            slowStart = 500;
         }
     }
     //If 400hz is chosen then 60hz will be selected here and 400hz will be ramped up to in SquareGen() or SineGen()

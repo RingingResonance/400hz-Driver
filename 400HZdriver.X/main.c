@@ -41,6 +41,7 @@ int main(void){
     PDC2 = 0000;            //set output to 0
     PDC3 = 0000;            //set output to 0
     waveType = wsine;
+    r400ramp = Enable;
     Init();             //Initialize vars.
     waveSet(waveType, 400);   //Set wave type and frequency standard.
     StartRecover();     //Start systems.

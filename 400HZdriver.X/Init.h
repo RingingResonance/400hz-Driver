@@ -20,6 +20,9 @@
 #define wsquare 0x0
 #define wsine 0x1
 
+#define Enable 0x1
+#define Disable 0x0
+
 #define pwmFreq100K 0x0000
 #define pwmFreq50K 0x0002
 #define pwmFreq25K 0x0004

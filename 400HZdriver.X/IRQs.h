@@ -38,6 +38,7 @@ extern void SineGen(void);
 register unsigned int dsp_accA asm("A");
 register unsigned int dsp_accB asm("B");
 
+unsigned int r400ramp = 0;
 unsigned int wheel = 0;
 unsigned int rampDiv = 0;
 unsigned int phase = 0;
